@@ -24,6 +24,8 @@ int main(){
     head = &a;
 
     printf("%d\n", head->next->next->data);
+    printf("%d\n", head->next->data);
+
     
 return 0;
 }
