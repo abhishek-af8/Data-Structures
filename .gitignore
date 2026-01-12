@@ -1,0 +1,11 @@
+# .gitignore (for C projects)
+*.o
+*.obj
+*.exe
+a.out
+build/
+bin/
+*.out
+*.log
+*.dSYM/
+*.DS_Store
