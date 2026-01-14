@@ -25,6 +25,7 @@ int main(){
 
     printf("%d\n", head->next->next->data);
     printf("%d\n", head->next->data);
+    printf("%d\n", head->data);
 
     
 return 0;
