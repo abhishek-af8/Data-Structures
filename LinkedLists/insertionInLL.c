@@ -76,7 +76,7 @@ int main(){
     newnode = head;
 
     unsigned int n;
-    printf("Enter the number of nodes you would like to have (a positive integer please) : ");
+    printf("Enter the number of nodes (a positive integer please) : ");
     scanf("%u", &n);
 
     for(int i = 0; i<(n-1); i++){
@@ -90,11 +90,11 @@ int main(){
     printList(head);
     
     unsigned int index;
-    printf("Enter the index at which you wanna insert the new node (a positive integer please) : ");
+    printf("Enter the index (a positive integer please) : ");
     scanf("%u", &index);
 
     int data;
-    printf("Enter the data which should be in the node (an integer please): ");
+    printf("Enter the data (an integer please): ");
     scanf("%d", &data);
 
     printf("List after insertion : ");
