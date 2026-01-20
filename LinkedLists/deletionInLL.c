@@ -54,6 +54,17 @@ void printList(struct node* pHead){
     printf("\n");
 }
 
+void freeNodes(struct node* head){
+    struct node *currentNode, *previousNode;
+    currentNode = head; previousNode = head;
+    while(currentNode!=NULL){
+        currentNode = currentNode->next;
+        free(previousNode);
+        previousNode = currentNode;
+    }
+    //you can do it with just one pointer as well. Use head instead of currentNode. Head rakhne ka koi point hai nahi, cuz at the end the list will not exist. So, BOOM. INJOY.
+}
+
 int main(){
     struct node* head, *tailNode, *n; int index;
     head = NULL;
@@ -85,6 +96,9 @@ int main(){
 
     int flag = 1;
     while(flag>0){
+        if(head==NULL){
+            break;
+        }
         printf("Enter the index which you want to delete : ");
         scanf("%d", &index);
         head = deleteNode(head, index);
@@ -93,4 +107,7 @@ int main(){
         printf("Enter flag : ");
         scanf("%d", &flag);
     }
+
+    freeNodes(head);
+    head=NULL; 
 }
