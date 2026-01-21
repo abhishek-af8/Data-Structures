@@ -66,7 +66,7 @@ void freeNodes(struct node* head){
 }
 
 int main(){
-    struct node* head, *tailNode, *n; int index;
+    struct node* head, *tailNode, *newNode; int index;
     head = NULL;
     int sizeOfList;
     printf("Enter the number of nodes : ");
@@ -79,11 +79,11 @@ int main(){
             tailNode = head;
         }
         else{
-            n = (struct node*)malloc(sizeof(struct node));
-            n->data = (i+1)*7;
-            n->next = NULL;
-            tailNode->next = n;
-            tailNode = n;
+            newNode = (struct node*)malloc(sizeof(struct node));
+            newNode->data = (i+1)*7;
+            newNode->next = NULL;
+            tailNode->next = newNode;
+            tailNode = newNode;
         }
     }
     printf("List before deletion : ");
